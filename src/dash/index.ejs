@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Image gallery</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Your custom styling -->
+    <style media="screen">
+        
+    </style>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+
+
+
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+<!-- Navigation Bar -->
+<nav  class="navbar navbar-dark " style="
+background-color: rgba(255,255,255,0.13);
+border-radius: 0px 0px 10px 10px;
+backdrop-filter: blur(10px);
+border: 2px solid rgba(255,255,255,0.1);
+box-shadow: 0 0 40px rgba(8,7,16,0.6);">
+
+
+    <!-- <h2>Cute image gallery</h2> -->
+    <a class="navbar-brand" href="#"><h3><strong>Yaadgaar </strong></h3> Image Gallery</a>
+    <div class="navbar-nav ml-auto">
+        <button class="btn btn-light" onclick="uploadPage()">Upload Files</button>
+    </div>
+    <div class="navbar-nav ml-auto">
+        <button class="btn btn-light" onclick="manageProfile()">Manage Profile</button>
+    </div>
+</nav>
+
+<!-- Progress Bar and Usage Information -->
+<div class="container mt-5 border rounded">
+    <div class="row">
+        <div style="    width: 100%;
+        margin: 10px;" class="progress-bar md-5">
+            <div class="progress-bar-inner"></div>
+        </div>
+    </div>
+    <div class="row mt-3 text-center">
+        <div class="col-md-12 text-center text-light">
+            <p id="usageInfo">You have used 0 KBs out of 10,000 KBs</p>
+        </div>
+    </div>
+</div>
+
+<!-- Image Gallery Container -->
+<div class="gallery-container">
+    <!-- Images will be dynamically added here using JavaScript -->
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Your custom JavaScript -->
+<script src="index.js">
+</script>
+
+<script src="progressbar.js">
+</script>
+
+</body>
+</html>

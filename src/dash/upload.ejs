@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- styling -->
+    <style media="screen">
+        *,
+        *:before,
+        *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #080710;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            background-color: #2c3e50;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            color: #ecf0f1;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .image-name {
+            padding: 10px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .delete-button {
+            background-color: #e74c3c;
+            color: #ffffff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .delete-button:hover {
+            background-color: #c0392b;
+        }
+
+        .upload-button,
+        .manage-profile-button {
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .upload-button:hover,
+        .manage-profile-button:hover {
+            background-color: #2980b9;
+        }
+
+        .progress-bar {
+            width: 200px;
+            height: 20px;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+
+        .progress-bar-inner {
+            height: 100%;
+            background-color: #2ecc71;
+        }
+        .background .shape{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .shape:first-child{
+            height: 170px;
+            width: 230px;
+            background: linear-gradient(
+                #1845ad,
+                #23a2f6
+            );
+            left:-50px;
+            top: -80px;
+        }
+        .shape:last-child{
+            background: linear-gradient(
+                to right,
+                #ff512f,
+                #f09819
+            );
+            right: -30px;
+            bottom: -80px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+<!-- Navigation Bar -->
+<nav  class="navbar navbar-dark " style="
+background-color: rgba(255,255,255,0.13);
+border-radius: 0px 0px 10px 10px;
+backdrop-filter: blur(10px);
+border: 2px solid rgba(255,255,255,0.1);
+box-shadow: 0 0 40px rgba(8,7,16,0.6);">
+
+
+    <a class="navbar-brand" href="#">Image Gallery App</a>
+    <div class="navbar-nav ml-auto">
+        <button class="btn btn-light" onclick="goBack()">Back</button>
+    </div>
+</nav>
+
+<!-- Upload Form -->
+<div class="container mt-4 text-light">
+    <h2><str>Upload Image </str></h2>
+    <br>
+    <div id="dropArea" class="background border" style="height: 40vh;">
+        <form id="uploadForm" enctype="multipart/form-data">
+            <h3>Drag and Drop Images Here</h3>
+            <input type="file" id="image" name="image" accept="image/*" style="display: none;">
+            
+        </form>
+    </div>
+    <p>or</p>
+    <form id="uploadForm" enctype="multipart/form-data">
+
+        <label for="image">Choose Image</label>
+        <input type="file" id="image" name="image" accept="image/*">
+
+        <button type="button" class="btn btn-light mt-3" onclick="uploadImage()">Upload</button>
+    </form>
+</div>
+
+
+
+
+<script src="upload.js">
+    
+</script>
+
+<!-- Bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- styling -->
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+<!-- Navigation Bar -->
+<nav  class="navbar navbar-dark " style="
+background-color: rgba(255,255,255,0.13);
+border-radius: 0px 0px 10px 10px;
+backdrop-filter: blur(10px);
+border: 2px solid rgba(255,255,255,0.1);
+box-shadow: 0 0 40px rgba(8,7,16,0.6);">
+
+
+    <a class="navbar-brand" href="#">Image Gallery App</a>
+    <div class="navbar-nav ml-auto">
+        <button class="btn btn-light" onclick="goBack()">Back</button>
+    </div>
+</nav>
+
+
+<div class="container mt-4 text-light border rounded" style="padding: 3%;">
+    <h2><strong>Edit Profile</strong></h2>
+    
+    <!-- Form for Profile Information -->
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter your username">
+        </div>
+
+        <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea class="form-control" id="bio" rows="3" placeholder="Enter your bio"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Email" disabled>
+        </div>
+
+        <button type="submit" class="btn btn-light">Submit</button>
+    </form>
+</div>
+
+<div class="container mt-4 text-light border rounded" style="padding: 3%;">
+    <h2><strong>Change Password</strong></h2>
+    
+    <!-- Form for Changing Password -->
+    <form>
+        <div class="form-group">
+            <label for="currentPassword">Current Password</label>
+            <div class="input-group">
+                <input type="password" class="form-control" id="currentPassword" placeholder="Enter current password">
+                <div class="input-group-append">
+                    <button class="btn btn-light" type="button" id="toggleCurrentPassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <div class="input-group">
+                <input type="password" class="form-control" id="newPassword" placeholder="Enter new password">
+                <div class="input-group-append">
+                    <button class="btn btn-light" type="button" id="toggleNewPassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-light">Submit</button>
+    </form>
+</div>
+
+
+
+
+<script src="upload.js">
+    
+</script>
+
+<!-- Bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
