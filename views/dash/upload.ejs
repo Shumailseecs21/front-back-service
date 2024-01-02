@@ -145,10 +145,7 @@ border: 2px solid rgba(255,255,255,0.1);
 box-shadow: 0 0 40px rgba(8,7,16,0.6);">
 
 
-    <a class="navbar-brand" href="#">Image Gallery App</a>
-    <div class="navbar-nav ml-auto">
-        <button class="btn btn-light" onclick="goBack()">Back</button>
-    </div>
+    <a class="navbar-brand" href="/gallery/<%= user._id %>">Image Gallery App</a>
 </nav>
 
 <!-- Upload Form -->
@@ -156,28 +153,24 @@ box-shadow: 0 0 40px rgba(8,7,16,0.6);">
     <h2><str>Upload Image </str></h2>
     <br>
     <div id="dropArea" class="background border" style="height: 40vh;">
-        <form id="uploadForm" enctype="multipart/form-data">
+        <form id="uploadForm" enctype="multipart/form-data" action="/gallery/updateprofile/<%= user._id %>">
             <h3>Drag and Drop Images Here</h3>
-            <input type="file" id="image" name="image" accept="image/*" style="display: none;">
-            
+            <input type="file" id="file" name="file" accept="image/jpeg,image/png,image/jpg" style="display: none;">
         </form>
     </div>
     <p>or</p>
-    <form id="uploadForm" enctype="multipart/form-data">
+    <form id="uploadForm" enctype="multipart/form-data" action="/gallery/uploadimage/<%= user._id %>" method="post">
 
         <label for="image">Choose Image</label>
-        <input type="file" id="image" name="image" accept="image/*">
-
-        <button type="button" class="btn btn-light mt-3" onclick="uploadImage()">Upload</button>
+        <input type="file" id="file" name="file" accept="image/jpeg,image/png,image/jpg">
+        <button type="submit" class="btn btn-light mt-3" ">Upload</button>
     </form>
 </div>
 
 
 
 
-<script src="upload.js">
-    
-</script>
+
 
 <!-- Bootstrap scripts -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
